@@ -1,23 +1,22 @@
 import { Head, Html, Main, NextScript } from 'next/document';
+import { description1, name } from '../data';
 
 export default function Document() {
-  const title = 'Daniel Goudie';
   const metaImageUrl = `https://${process.env.VERCEL_URL}/images/twitter_og.png`;
-  const description = `Hey, I'm Daniel. I'm a full-stack software engineer with experience architecting, building, and maintaining systems that support a variety of different business needs at enterprise scale.`;
   return (
     <Html>
       <Head>
-        <meta name='description' content={description} />
-        <meta property='og:title' content={title} />
-        <meta property='og:site_name' content={title} />
+        <meta name='description' content={description1} />
+        <meta property='og:title' content={name} />
+        <meta property='og:site_name' content={name} />
         <meta property='og:url' content='https://goudie.dev' />
-        <meta property='og:description' content={description} />
+        <meta property='og:description' content={description1} />
         <meta property='og:type' content='website' />
         <meta property='og:image' content={metaImageUrl} />
-        <meta name='twitter:text:title' content={title} />
+        <meta name='twitter:text:title' content={name} />
         <meta name='twitter:card' content='summary' />
         <meta name='twitter:creator' content='@daniel_j_goudie' />
-        <meta name='twitter:description' content={description} />
+        <meta name='twitter:description' content={description1} />
         <meta name='twitter:image' content={metaImageUrl} />
         <meta charSet='utf-8' />
         <link

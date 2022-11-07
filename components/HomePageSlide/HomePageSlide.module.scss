@@ -1,0 +1,88 @@
+.root {
+  --button-background: black;
+  --button-color: white;
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    margin: 4rem 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &:first-child {
+    .content {
+      margin: 0 0 4rem;
+    }
+  }
+
+  &:last-child {
+    .content {
+      margin: 4rem 0 0;
+    }
+  }
+}
+
+.slideChange {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 1;
+
+  &.previous {
+    padding-top: 1rem;
+    top: 0;
+  }
+
+  &.next {
+    padding-bottom: 1rem;
+    bottom: 0;
+  }
+}
+
+.slideChangeButton {
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--button-background);
+  color: var(--button-color);
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+  height: 44px;
+  justify-content: center;
+  outline: none;
+  border: none;
+  border-radius: 1000px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  transform: scale(0.9);
+  filter: blur(3px);
+  transition: all 250ms cubic-bezier(0.2, 0, 0, 1);
+  cursor: pointer;
+
+  &.enter {
+    transition-delay: 1000ms;
+  }
+
+  &.enterActive,
+  &.enterDone {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0);
+  }
+
+  &.exit {
+    transition-delay: 0ms;
+  }
+
+  &:active {
+    transform: translateY(2px);
+  }
+}

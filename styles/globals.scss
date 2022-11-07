@@ -1,8 +1,13 @@
+@import '@fortawesome/fontawesome-free/css/fontawesome.css';
+@import '@fortawesome/fontawesome-free/css/solid.css';
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
+
+  --background: white;
 }
 
 .standout {
