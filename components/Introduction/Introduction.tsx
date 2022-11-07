@@ -13,8 +13,7 @@ export default function Introduction() {
             alt={name}
             src='/images/daniel_sq.jpg'
             fill={true}
-            sizes='(max-width: 768px) 100vw,
-                 (max-width: 1200px) 50vw,
+            sizes='(max-width: 649px) 200px,
                  300px'
             priority={true}
           />
