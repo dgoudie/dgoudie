@@ -3,6 +3,7 @@ import { useCallback, useRef } from 'react';
 import HomePageSlide from '../components/HomePageSlide/HomePageSlide';
 import Introduction from '../components/Introduction/Introduction';
 import { NextPageWithLayout } from './_app';
+import Skillset from '../components/Skillset/Skillset';
 import styles from './index.module.scss';
 import { useHeadWithTitle } from '../utils/use-head-with-title';
 
@@ -22,18 +23,25 @@ const Landing: NextPageWithLayout = () => {
       <div className={styles.root}>
         <div className={styles.slides} ref={slidesDivRef}>
           <HomePageSlide
-            slide={'Introduction'}
-            nextSlide={`Skillset`}
+            slide='Introduction'
+            nextSlide='Education'
             slideSelected={slideSelected}
           >
             <Introduction />
           </HomePageSlide>
           <HomePageSlide
             previousSlide='Introduction'
-            slide={'Skillset'}
-            nextSlide={``}
+            slide='Education'
+            nextSlide='Skillset'
             slideSelected={slideSelected}
           ></HomePageSlide>
+          <HomePageSlide
+            previousSlide='Education'
+            slide='Skillset'
+            slideSelected={slideSelected}
+          >
+            <Skillset />
+          </HomePageSlide>
         </div>
       </div>
     </>

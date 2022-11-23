@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 import { CSSTransition } from 'react-transition-group';
 import classNames from 'classnames';
@@ -31,8 +31,10 @@ export default function HomePageSlide({
             nodeRef={previousButtonRef}
             timeout={300}
             classNames={styles}
+            unmountOnExit={true}
           >
             <button
+              data-previous-slide={previousSlide}
               ref={previousButtonRef}
               type='button'
               className={classNames(styles.slideChangeButton)}
@@ -52,8 +54,10 @@ export default function HomePageSlide({
             nodeRef={nextButtonRef}
             timeout={300}
             classNames={styles}
+            unmountOnExit={true}
           >
             <button
+              data-next-slide={nextSlide}
               ref={nextButtonRef}
               type='button'
               className={classNames(styles.slideChangeButton)}

@@ -19,6 +19,17 @@ export default function Document() {
         <meta name='twitter:description' content={description1} />
         <meta name='twitter:image' content={metaImageUrl} />
         <meta charSet='utf-8' />
+        <meta name='color-scheme' content='dark light' />
+        <meta
+          name='theme-color'
+          media='(prefers-color-scheme: light)'
+          content='#ffffff'
+        />
+        <meta
+          name='theme-color'
+          media='(prefers-color-scheme: dark)'
+          content='#21262d'
+        />
         <link
           rel='preconnect'
           href='https://fonts.googleapis.com'
@@ -37,7 +48,6 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <div id='isometric_portal'></div>
       </body>
     </Html>
   );
