@@ -1,18 +1,16 @@
 import { useCallback, useRef } from 'react';
 
-import Education from '../components/Education/Education';
+import Experience from '../components/Experience/Experience';
 import HomePageSlide from '../components/HomePageSlide/HomePageSlide';
 import Introduction from '../components/Introduction/Introduction';
 import { NextPageWithLayout } from './_app';
 import Skillset from '../components/Skillset/Skillset';
-import WorkExperience from '../components/WorkExperience/WorkExperience';
 import styles from './index.module.scss';
 import { useHeadWithTitle } from '../utils/use-head-with-title';
 
 const slides = [
   { name: 'Introduction', content: <Introduction /> },
-  { name: 'Education', content: <Education /> },
-  { name: 'Work Experience', content: <WorkExperience /> },
+  { name: 'Experience', content: <Experience /> },
   { name: 'Skillset', content: <Skillset /> },
 ];
 
