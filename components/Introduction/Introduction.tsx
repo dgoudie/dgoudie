@@ -19,8 +19,8 @@ export default function Introduction() {
           />
         </div>
         <div className={styles.nameAndTitle}>
-          <h1>{name}</h1>
-          <h2>{title}</h2>
+          <h1 className='standout'>{name}</h1>
+          <h2 className='standout'>{title}</h2>
         </div>
       </div>
       <p>{description1}</p>

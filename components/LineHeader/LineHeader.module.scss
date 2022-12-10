@@ -1,0 +1,13 @@
+.root {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+.line {
+  flex: 1;
+  background-color: var(--color);
+  height: 1px;
+}
